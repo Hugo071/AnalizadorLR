@@ -143,9 +143,9 @@ public class Principal extends javax.swing.JFrame {
         while(ban == false)
         {
             int ren, col = 0;
-            System.out.println("\nComponente: "+comp);
+            //System.out.println("\nComponente: "+comp);
             cimaPila = pila.peek();
-            System.out.println("Cima de la pila: "+cimaPila);
+            //System.out.println("Cima de la pila: "+cimaPila);
             ren = Integer.parseInt(cimaPila.substring(1));
             for(String columna : Columnas)
             {
@@ -154,7 +154,7 @@ public class Principal extends javax.swing.JFrame {
                 else
                     col++;
             }
-            System.out.println("Renglon: "+ren + " Columna: " + col);
+            //System.out.println("Renglon: "+ren + " Columna: " + col);
             accion = Tabla[ren][col];
             if(accion.equals(""))
             {
@@ -184,7 +184,7 @@ public class Principal extends javax.swing.JFrame {
     {
         pila.push(comp);
         pila.push(accion);
-        System.out.println("Desplazamiento.- " + "Terminal: " + comp + " Estado: " + pila.peek());
+        //System.out.println("Desplazamiento.- " + "Terminal: " + comp + " Estado: " + pila.peek());
         return true;
     }
     
@@ -211,7 +211,7 @@ public class Principal extends javax.swing.JFrame {
         }
         estadoact = Tabla[ren][col];
         pila.push(estadoact);
-        System.out.println("Reduccion.- " + "NT: " + nt + " Cima de la Pila: " + pila.peek() + " Produccion: " + redu +" Estado Ant: " + estadoant);
+        //System.out.println("Reduccion.- " + "NT: " + nt + " Cima de la Pila: " + pila.peek() + " Produccion: " + redu +" Estado Ant: " + estadoant);
         return false;
     }
     
